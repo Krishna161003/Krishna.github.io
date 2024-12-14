@@ -325,20 +325,24 @@ img {
   width: 40%;
 }
 
-.skills__css {
-  width: 70%;
-}
-
-.skills__js {
+.skills__c {
   width: 50%;
 }
 
-.skills__ux {
+.skills__d{
+  width: 60%;
+}
+
+.skills__cc {
+  width: 60%;
+}
+
+.skills__db {
   width: 50%;
 }
 
-.skills__ux {
-  width: 50%;
+.skills__linux {
+  width: 60%;
 }
 
 .skills__img {
@@ -351,7 +355,7 @@ img {
 }
 
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  /* box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15); */
   border-radius: .5rem;
   overflow: hidden;
 }
@@ -360,9 +364,9 @@ img {
   transition: 1s;
 }
 
-.work__img img:hover {
+/* .work__img img:hover {
   transform: scale(1.1);
-}
+} */
 
 .edu__container {
   display: flex;
