@@ -14,13 +14,6 @@
 </head>
 
 <body>
-    <div id="loader">
-        <div class="three-body">
-            <div class="three-body__dot"></div>
-            <div class="three-body__dot"></div>
-            <div class="three-body__dot"></div>
-        </div>
-    </div>
     <div id="content" style="display: none;">
         <!--===== HEADER =====-->
         <header class="l-header">
@@ -332,25 +325,39 @@
             <p class="footer__copy"></p>
         </footer>
     </div>
-
-
-    <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const loader = document.getElementById('loader');
-                if (loader) loader.style.display = 'none';
-
-                const content = document.getElementById('content');
-                if (content) content.style.display = 'block';
-            }, 6000); // Delay in milliseconds
-        });
-    </script>
+    <div id="loader">
+        <div class="three-body">
+            <div class="three-body__dot"></div>
+            <div class="three-body__dot"></div>
+            <div class="three-body__dot"></div>
+        </div>
+    </div>
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/Escript.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+
+            // Ensure the loader is hidden
+            if (loader) {
+                loader.style.display = 'none';
+
+                // Force reflow to ensure browser renders correctly
+                loader.offsetHeight; // Trigger reflow
+            }
+
+            // Ensure the content is displayed
+            if (content) {
+                content.style.display = 'block';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
