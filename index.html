@@ -353,7 +353,10 @@
 
             // Ensure the content is displayed
             if (content) {
+                 // Force a repaint by triggering reflow
                 content.style.display = 'block';
+                content.style.opacity = '1';
+                content.offsetHeight; // Trigger reflow
             }
         });
     </script>
